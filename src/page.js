@@ -2,6 +2,10 @@ import React from 'react';
 
 import delay from './utils/delay';
 
+import './styles/index.css';
+
+import shrek_jpg from './images/shrek.jpg';
+
 import LoadingSection from './sections/loading';
 
 export default class Page extends React.Component
@@ -32,10 +36,14 @@ export default class Page extends React.Component
 
 		this.setState({
 			loading_gif: true,
-			show_page: true,
 		});
 
 		await delay(LoadingSection.GIF_TIME());
+
+		this.setState({
+			show_page: true,
+		});
+
 
 		for(var step = 0; step < LoadingSection.ANIMATION_STEP(); step ++)
 		{
@@ -65,13 +73,19 @@ export default class Page extends React.Component
 						/>
 					</div>
 				} { !this.state.loading &&
-					<h2>Bruh</h2>
+					<></>
 				}</>
 				<> { this.state.show_page &&
 					<div style={{
 						opacity: loading_fade,
 					}}>
-						This will be a page...
+						<img style={{
+							width: '100%',
+							height: '100vh',
+						}} src={ shrek_jpg } />
+						<h1>
+							JT VISUALS OFFICAL SITE
+						</h1>
 					</div>
 				} </>
 			</div>

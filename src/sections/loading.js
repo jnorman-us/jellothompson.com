@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../styles/loading.css';
+
 import jt_visuals_gif from '../images/jt-visuals.gif';
 
 export default class LoadingSection extends React.Component
@@ -33,14 +35,11 @@ export default class LoadingSection extends React.Component
 	render()
 	{
 		return (
-			<div style={{
+			<div className="loading" style={{
 				opacity: this.state.fade
 			}}>
-				<h1>
-					{ this.state.fade }
-				</h1>
 				<> { this.state.gif &&
-					<img src={ jt_visuals_gif } />
+					<img className="loading-gif" src={ jt_visuals_gif } />
 				} </>
 			</div>
 		);
