@@ -6,12 +6,12 @@ import jt_visuals_gif from '../images/jt-visuals.gif';
 
 export default class LoadingSection extends React.Component
 {
-	static ANIMATION_STEP() { return 20; }
+	static ANIMATION_STEP() { return 30; }
 
-	static FADEIN_TIME() { return 1000; }
-	static GIF_TIME() { return 4420; } // actual is 4920, but we're accounting for
+	static FADEIN_TIME() { return 150; }
+	static GIF_TIME() { return 442; } // actual is 4920, but we're accounting for
 										// fadeout time
-	static FADEOUT_TIME() { return 500; }
+	static FADEOUT_TIME() { return 50; }
 
 	constructor(props)
 	{

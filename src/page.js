@@ -7,6 +7,7 @@ import './styles/index.css';
 import shrek_jpg from './images/shrek.jpg';
 
 import LoadingSection from './sections/loading';
+import WelcomeSection from './sections/welcome';
 
 export default class Page extends React.Component
 {
@@ -79,6 +80,7 @@ export default class Page extends React.Component
 					<div style={{
 						opacity: loading_fade,
 					}}>
+						<WelcomeSection />
 						<img style={{
 							width: '100%',
 							height: '100vh',
