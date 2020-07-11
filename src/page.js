@@ -25,17 +25,9 @@ export default class Page extends React.Component
 
 	async componentDidMount()
 	{
-		this.setState({ loading: true, });
-
-		for(var step = 0; step < LoadingSection.ANIMATION_STEP(); step ++)
-		{
-			this.setState({
-				loading_fade: this.state.loading_fade + 1,
-			});
-			await delay(LoadingSection.FADEIN_TIME() / LoadingSection.ANIMATION_STEP());
-		}
-
 		this.setState({
+			loading: true,
+			loading_fade: LoadingSection.ANIMATION_STEP(),
 			loading_gif: true,
 		});
 
@@ -86,7 +78,7 @@ export default class Page extends React.Component
 							height: '100vh',
 						}} src={ shrek_jpg } />
 						<h1>
-							JT VISUALS OFFICAL SITE
+							JT Visuals Official Site
 						</h1>
 					</div>
 				} </>
