@@ -1,0 +1,21 @@
+.menu {
+	width: 100%;
+	height: 100px;
+	padding: 10px 5%;
+}
+
+@media screen and (max-width: 600px) {
+	.menu {
+		padding: 10px 10px;
+		height: 80px;
+	}
+}
+
+.menu-logo {
+	height: 100%;
+	width: auto;
+}
+
+.menu-logo-inverted {
+	filter: invert(100%);
+}

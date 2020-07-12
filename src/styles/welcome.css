@@ -6,6 +6,7 @@
 }
 
 .welcome-video {
+	z-index: 0;
 	height: 100%;
 	width: 177.777778vh;
 	min-width: 100%;
@@ -15,4 +16,18 @@
 	left: 50%; /* % of surrounding element */
     top: 50%;
     transform: translate(-50%, -50%); /* % of current element */
+
+	filter: contrast(90%);
+}
+
+.welcome-title {
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.welcome-menu {
+	position: relative;
 }

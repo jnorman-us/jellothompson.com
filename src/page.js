@@ -8,6 +8,7 @@ import shrek_jpg from './images/shrek.jpg';
 
 import LoadingSection from './sections/loading';
 import WelcomeSection from './sections/welcome';
+import AboutMeSection from './sections/about-me';
 
 export default class Page extends React.Component
 {
@@ -73,13 +74,7 @@ export default class Page extends React.Component
 						opacity: loading_fade,
 					}}>
 						<WelcomeSection />
-						<img style={{
-							width: '100%',
-							height: '100vh',
-						}} src={ shrek_jpg } />
-						<h1>
-							JT Visuals Official Site
-						</h1>
+						<AboutMeSection />
 					</div>
 				} </>
 			</div>

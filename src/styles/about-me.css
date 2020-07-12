@@ -1,0 +1,21 @@
+.about-me {
+	background-color: white;
+	padding: 25px 10%;
+}
+
+.about-me-title {
+	font-weight: 800px;
+	font-size: 24px;
+}
+
+.about-me-paragraph {
+	font-size: 16px;
+	padding: 35px 0px;
+	line-height: 1.6;
+}
+
+@media screen and (max-width: 600px) {
+	.about-me {
+		padding: 25px 25px;
+	}
+}
