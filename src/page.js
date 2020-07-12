@@ -1,8 +1,10 @@
 import React from 'react';
+import { createGlobalStyle } from 'styled-components';
 
 import delay from './utils/delay';
 
 import './styles/index.css';
+import kiona from './fonts/Kiona-Regular.ttf';
 
 import shrek_jpg from './images/shrek.jpg';
 
@@ -56,9 +58,24 @@ export default class Page extends React.Component
 
 	render()
 	{
-		const loading_fade = 1 - this.state.loading_fade / LoadingSection.ANIMATION_STEP()
+		const loading_fade = 1 - this.state.loading_fade / LoadingSection.ANIMATION_STEP();
+
+		const GlobalStyle = createGlobalStyle`
+			@font-face {
+				font-family: 'Kiona';
+				src: url(${ kiona }) format('truetype');
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			body {
+				font-family: 'Kiona';
+			}
+		`;
+
 		return (
 			<div>
+				<GlobalStyle />
 				<> { this.state.loading &&
 					<div>
 						<LoadingSection
