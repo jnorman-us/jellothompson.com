@@ -4,7 +4,7 @@ import Menu from '../menu.js';
 
 import '../styles/welcome.css';
 
-import highlight_video from '../images/suppa_compressed.mp4';
+import highlight_video from '../images/720HD.mp4';
 
 export default class WelcomeSection extends React.Component
 {
@@ -18,13 +18,13 @@ export default class WelcomeSection extends React.Component
 		return (
 			<div className="welcome">
 				<video className="welcome-video" autoPlay muted loop src={ highlight_video } />
+				<div className="welcome-title">
+					Jello Thompson Visuals
+				</div>
 				<div className="welcome-menu">
 					<Menu
 						white={ true }
 					/>
-				</div>
-				<div className="welcome-title">
-					WHAT'S UPPPP
 				</div>
 			</div>
 		);
