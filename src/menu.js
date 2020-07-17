@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import './styles/menu.css';
 
@@ -57,16 +58,24 @@ export default class Menu extends React.Component
 					<> { !this.state.mobile &&
 						<div>
 							<div className="menu-selection">
-								About Me
+								<Link to="about-me-section" smooth={ true }>
+									About Me
+								</Link>
 							</div>
 							<div className="menu-selection">
-								Reel
+								<Link to="reel-section" smooth={ true }>
+									Reel
+								</Link>
 							</div>
 							<div className="menu-selection">
-								Portfolio
+								<Link to="portfolio-section" smooth={ true }>
+									Portfolio
+								</Link>
 							</div>
 							<div className="menu-selection">
-								Contact Me
+								<Link to="contact-me-section" smooth={ true }>
+									Contact Me
+								</Link>
 							</div>
 						</div>
 					} { this.state.mobile &&

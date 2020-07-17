@@ -3,14 +3,15 @@ import { createGlobalStyle } from 'styled-components';
 
 import delay from './utils/delay';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css';
-import kiona from './fonts/Kiona-Regular.ttf';
 
 import shrek_jpg from './images/shrek.jpg';
 
 import LoadingSection from './sections/loading';
 import WelcomeSection from './sections/welcome';
 import AboutMeSection from './sections/about-me';
+import PortfolioSection from './sections/portfolio';
 
 export default class Page extends React.Component
 {
@@ -60,22 +61,8 @@ export default class Page extends React.Component
 	{
 		const loading_fade = 1 - this.state.loading_fade / LoadingSection.ANIMATION_STEP();
 
-		const GlobalStyle = createGlobalStyle`
-			@font-face {
-				font-family: 'Kiona';
-				src: url(${ kiona }) format('truetype');
-				font-weight: normal;
-				font-style: normal;
-			}
-
-			body {
-				font-family: 'Kiona';
-			}
-		`;
-
 		return (
 			<div>
-				<GlobalStyle />
 				<> { this.state.loading &&
 					<div>
 						<LoadingSection
@@ -92,6 +79,7 @@ export default class Page extends React.Component
 					}}>
 						<WelcomeSection />
 						<AboutMeSection />
+						<PortfolioSection />
 					</div>
 				} </>
 			</div>
