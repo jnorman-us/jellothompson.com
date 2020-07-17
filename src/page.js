@@ -11,7 +11,9 @@ import shrek_jpg from './images/shrek.jpg';
 import LoadingSection from './sections/loading';
 import WelcomeSection from './sections/welcome';
 import AboutMeSection from './sections/about-me';
+import ReelSection from './sections/reel';
 import PortfolioSection from './sections/portfolio';
+import ContactMeSection from './sections/contact-me';
 
 export default class Page extends React.Component
 {
@@ -79,7 +81,9 @@ export default class Page extends React.Component
 					}}>
 						<WelcomeSection />
 						<AboutMeSection />
+						<ReelSection />
 						<PortfolioSection />
+						<ContactMeSection />
 					</div>
 				} </>
 			</div>
