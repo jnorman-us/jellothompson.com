@@ -1,19 +1,8 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
 
-import delay from './utils/delay';
+import LoadingSection from './sections/loading.js';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css';
-
-import shrek_jpg from './images/shrek.jpg';
-
-import LoadingSection from './sections/loading';
-import WelcomeSection from './sections/welcome';
-import AboutMeSection from './sections/about-me';
-import ReelSection from './sections/reel';
-import PortfolioSection from './sections/portfolio';
-import ContactMeSection from './sections/contact-me';
 
 export default class Page extends React.Component
 {
@@ -23,70 +12,73 @@ export default class Page extends React.Component
 
 		this.state = {
 			loading: false,
-			loading_fade: 0,
-			loading_gif: false,
-			show_page: false,
+			displaying: false,
+			mobile: false,
 		};
 	}
 
 	async componentDidMount()
 	{
+		this.updateDimensions();
+		window.addEventListener('resize', this.updateDimensions.bind(this));
+
 		this.setState({
 			loading: true,
-			loading_fade: LoadingSection.ANIMATION_STEP(),
-			loading_gif: true,
 		});
+	}
 
-		await delay(LoadingSection.GIF_TIME());
-
+	handleLoaded()
+	{
 		this.setState({
-			show_page: true,
+			displaying: true,
 		});
+	}
 
-
-		for(var step = 0; step < LoadingSection.ANIMATION_STEP(); step ++)
-		{
-			this.setState({
-				loading_fade: this.state.loading_fade - 1,
-			});
-			await delay(LoadingSection.FADEOUT_TIME() / LoadingSection.ANIMATION_STEP());
-		}
-
+	handleFaded()
+	{
 		this.setState({
 			loading: false,
-			loading_fade: 0,
-			loading_gif: false,
 		});
 	}
 
 	render()
 	{
-		const loading_fade = 1 - this.state.loading_fade / LoadingSection.ANIMATION_STEP();
+		const mobile = this.state.mobile;
 
 		return (
-			<div>
+			<div className="page">
 				<> { this.state.loading &&
+					<LoadingSection
+						mobile={ mobile }
+						onLoaded={ this.handleLoaded.bind(this) }
+						onFaded={ this.handleFaded.bind(this) }
+					/>
+				} </>
+				<> { this.state.displaying &&
 					<div>
-						<LoadingSection
-							fade={ this.state.loading_fade }
-							gif={ this.state.loading_gif }
-						/>
-					</div>
-				} { !this.state.loading &&
-					<></>
-				}</>
-				<> { this.state.show_page &&
-					<div style={{
-						opacity: loading_fade,
-					}}>
-						<WelcomeSection />
-						<AboutMeSection />
-						<ReelSection />
-						<PortfolioSection />
-						<ContactMeSection />
+						This is where the contents of the scrollable page will go
 					</div>
 				} </>
 			</div>
 		);
+	}
+
+	updateDimensions()
+	{
+		const width = window.innerWidth;
+		const mobile_width = 800;
+
+		if(width <= mobile_width && !this.state.mobile)
+		{
+			this.setState({
+				mobile: true,
+			});
+		}
+		else if(width > mobile_width && this.state.mobile)
+		{
+			this.setState({
+				mobile: false,
+			});
+		}
 	}
 }

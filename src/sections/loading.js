@@ -1,45 +1,62 @@
 import React from 'react';
 
+import delay from '../utils/delay.js';
+
 import '../styles/loading.css';
 
 import jt_visuals_gif from '../images/jt-visuals.gif';
 
 export default class LoadingSection extends React.Component
 {
-	static ANIMATION_STEP() { return 30; }
-
-	static GIF_TIME() { return 442; } // actual is 4920, but we're accounting for
-										// fadeout time
-	static FADEOUT_TIME() { return 50; }
-
 	constructor(props)
 	{
 		super(props);
 
 		this.state = {
-			fade: props.fade,
-			gif: props.gif,
+			opacity: 100,
+			mobile: props.mobile,
 		};
+
+		this.onLoaded = props.onLoaded;
+		this.onFaded = props.onFaded;
 	}
 
 	async componentWillReceiveProps(props)
 	{
 		this.setState({
-			fade: props.fade / LoadingSection.ANIMATION_STEP(),
-			gif: props.gif,
+			mobile: props.mobile,
 		});
 	}
 
+	async componentDidMount()
+	{
+		await delay(4420);
+
+		this.onLoaded();
+
+		for(var i = 1; i <= 15; i ++)
+		{
+			this.setState({
+				opacity: (100 - 100 * i / 15) / 100,
+			});
+			await delay(500 / 15);
+		}
+
+		this.onFaded();
+	}
 
 	render()
 	{
+		const opacity = this.state.opacity;
+		const mobile = this.state.mobile;
+
 		return (
 			<div className="loading" style={{
-				opacity: this.state.fade
+				opacity: opacity
 			}}>
-				<> { this.state.gif &&
-					<img className="loading-gif" src={ jt_visuals_gif } />
-				} </>
+				<img className={
+					`loading-gif ${ mobile ? 'loading-gif-mobile' : ''}`
+				} src={ jt_visuals_gif } />
 			</div>
 		);
 	}

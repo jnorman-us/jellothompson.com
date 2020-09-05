@@ -14,9 +14,11 @@
 	top: 30%;
 }
 
-.loading-gif-mobile {
-	width: 100%;
-	height: auto;
-	left: 0px;
-	top: 30%;
+@media screen and (max-width: 600px) {
+	.loading-gif {
+		width: 100%;
+		height: auto;
+		left: 0px;
+		top: 30%;
+	}
 }
