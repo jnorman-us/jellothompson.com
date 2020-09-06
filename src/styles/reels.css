@@ -1,0 +1,41 @@
+.reels {
+	width: 100%;
+	height: 100vh;
+}
+
+.reels-reel {
+	position: absolute;
+	width: 33%;
+	height: 100%;
+
+	overflow: hidden;
+}
+
+.reels-video {
+	height: 100%;
+	width: auto;
+
+	position: relative;
+}
+
+#one {
+	filter: sepia() saturate(10000%) hue-rotate(30deg);
+	z-index: 1;
+
+	transition: .5s;
+}
+
+#two {
+	filter: sepia() saturate(10000%) hue-rotate(90deg);
+	z-index: 2;
+
+	transition: .7s;
+}
+
+#three {
+	width: 34%;
+	filter: sepia() saturate(10000%) hue-rotate(220deg);
+	z-index: 3;
+
+	transition: .9s;
+}

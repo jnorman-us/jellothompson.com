@@ -1,6 +1,7 @@
 import React from 'react';
 
 import LoadingSection from './sections/loading.js';
+import ReelsSection from './sections/reels.js';
 
 import './styles/index.css';
 
@@ -56,7 +57,9 @@ export default class Page extends React.Component
 				} </>
 				<> { this.state.displaying &&
 					<div>
-						This is where the contents of the scrollable page will go
+						<ReelsSection
+							mobile={ mobile }
+						/>
 					</div>
 				} </>
 			</div>
