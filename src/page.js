@@ -2,8 +2,10 @@ import React from 'react';
 
 import LoadingSection from './sections/loading.js';
 import ReelsSection from './sections/reels.js';
+import AboutMeSection from './sections/about-me.js';
 
 import './styles/index.css';
+import './styles/page.css';
 
 export default class Page extends React.Component
 {
@@ -22,6 +24,7 @@ export default class Page extends React.Component
 	{
 		this.updateDimensions();
 		window.addEventListener('resize', this.updateDimensions.bind(this));
+		window.addEventListener('scroll', this.handleScroll.bind(this));
 
 		this.setState({
 			loading: true,
@@ -60,6 +63,9 @@ export default class Page extends React.Component
 						<ReelsSection
 							mobile={ mobile }
 						/>
+						<AboutMeSection
+							mobile={ mobile }
+						/>
 					</div>
 				} </>
 			</div>
@@ -83,5 +89,11 @@ export default class Page extends React.Component
 				mobile: false,
 			});
 		}
+	}
+
+	handleScroll(e)
+	{
+		console.log(window.scrollY);
+		e.preventDefault();
 	}
 }

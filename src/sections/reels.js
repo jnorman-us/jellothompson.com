@@ -13,9 +13,9 @@ export default class ReelsSection extends React.Component
 
 		this.state = {
 			mobile: false,
-			one_offset: -34,
-			two_offset: -34,
-			three_offset: -34,
+			show_one: false,
+			show_two: false,
+			show_three: false,
 		};
 	}
 
@@ -31,44 +31,45 @@ export default class ReelsSection extends React.Component
 		await delay(300);
 
 		this.setState({
-			one_offset: 0,
+			show_one: true,
 		});
 
 		await delay(500);
 
 		this.setState({
-			two_offset: 33,
+			show_two: true,
 		});
 
 		await delay(700);
 
 		this.setState({
-			three_offset: 66,
+			show_three: true,
 		});
 	}
 
 	render()
 	{
-		const one_offset = this.state.one_offset;
-		const two_offset = this.state.two_offset;
-		const three_offset = this.state.three_offset;
+		const show_one = this.state.show_one;
+		const show_two = this.state.show_two;
+		const show_three = this.state.show_three;
+
+		const reel_one_class = `reels-reel reel-one ${ show_one ? 'reel-one-shown' : '' }`;
+		const reel_two_class = `reels-reel reel-two ${ show_two ? 'reel-two-shown' : '' }`;
+		const reel_three_class = `reels-reel reel-three ${ show_three ? 'reel-three-shown' : '' }`;
 
 		return (
 			<div className="reels">
-				<div id="one" className="reels-reel" style={{
-					left: `${ one_offset }%`,
-				}}>
+				<div className={ reel_one_class }>
 					<video className="reels-video" autoPlay muted loop src={ motion_video } />
+					<div className="reels-overlay-one" />
 				</div>
-				<div id="two" className="reels-reel" style={{
-					left: `${ two_offset }%`,
-				}}>
+				<div className={ reel_two_class }>
 					<video className="reels-video" autoPlay muted loop src={ motion_video } />
+					<div className="reels-overlay-two" />
 				</div>
-				<div id="three" className="reels-reel" style={{
-					left: `${ three_offset }%`,
-				}}>
+				<div className={ reel_three_class }>
 					<video className="reels-video" autoPlay muted loop src={ motion_video } />
+					<div className="reels-overlay-three" />
 				</div>
 			</div>
 		);
