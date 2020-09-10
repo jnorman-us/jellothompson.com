@@ -11,6 +11,8 @@ export default class ReelsSection extends React.Component
 	{
 		super(props);
 
+		this.onSlided = props.onSlided;
+
 		this.state = {
 			mobile: false,
 			show_one: false,
@@ -40,11 +42,15 @@ export default class ReelsSection extends React.Component
 			show_two: true,
 		});
 
-		await delay(700);
+		await delay(600);
 
 		this.setState({
 			show_three: true,
 		});
+
+		await delay(400);
+
+		this.onSlided();
 	}
 
 	render()

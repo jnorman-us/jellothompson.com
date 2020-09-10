@@ -6,26 +6,24 @@
 
 .reels-reel {
 	position: absolute;
-	width: 100%;
-	height: calc(33%);
-	top: calc(-34% - 50px);
+	width: 33%;
+	height: 100%;
+	left: -34%;
 
 	overflow: hidden;
 
-    clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
+	opacity: 1;
 }
 
 .reels-video {
-	height: auto;
-	width: 100%;
+	height: 100%;
+	width: auto;
 
 	position: absolute;
-	top: -25%;
 }
 
 .reel-one {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-	height: calc(33% + 25px);
+	width: 33%;
 	z-index: 1;
 
 	transition: .5s;
@@ -39,12 +37,12 @@
 }
 
 .reel-one-shown {
-	top: 0%;
+	left: 0%;
 }
 
 .reel-two {
 	z-index: 2;
-	height: calc(33% + 50px);
+	width: 33%;
 
 	transition: .7s;
 }
@@ -57,12 +55,12 @@
 }
 
 .reel-two-shown {
-	top: calc(33% - 25px);
+	left: 33%;
 }
 
 .reel-three {
 	z-index: 3;
-	height: calc(34% + 25px);
+	width: 34%;
 
 	transition: .9s;
 }
@@ -75,5 +73,5 @@
 }
 
 .reel-three-shown {
-	top: calc(66% - 25px);
+	left: 66%;
 }

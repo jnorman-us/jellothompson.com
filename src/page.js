@@ -16,6 +16,7 @@ export default class Page extends React.Component
 		this.state = {
 			loading: false,
 			displaying: false,
+			slided: false,
 			mobile: false,
 		};
 	}
@@ -45,23 +46,34 @@ export default class Page extends React.Component
 		});
 	}
 
+	handleSlided()
+	{
+		this.setState({
+			slided: true,
+		})
+	}
+
 	render()
 	{
 		const mobile = this.state.mobile;
+		const loading = this.state.loading;
+		const displaying = this.state.displaying;
+		const slided = this.state.slided;
 
 		return (
-			<div className="page">
-				<> { this.state.loading &&
+			<div className={ `page ${ slided ? 'page-white' : '' }`}>
+				<> { loading &&
 					<LoadingSection
 						mobile={ mobile }
 						onLoaded={ this.handleLoaded.bind(this) }
 						onFaded={ this.handleFaded.bind(this) }
 					/>
 				} </>
-				<> { this.state.displaying &&
+				<> { displaying &&
 					<div>
 						<ReelsSection
 							mobile={ mobile }
+							onSlided={ this.handleSlided.bind(this) }
 						/>
 						<AboutMeSection
 							mobile={ mobile }
