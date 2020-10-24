@@ -1,3 +1,12 @@
+@font-face {
+	font-family: Kiona;
+	src: url("../fonts/Kiona-Regular.ttf");
+}
+
+body {
+	font-family: Kiona;
+}
+
 .page {
 	background-color: black;
 	transition: 1s;

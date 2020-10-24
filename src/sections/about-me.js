@@ -33,13 +33,13 @@ export default class AboutMeSection extends React.Component
 			<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }` }>
 				<Container fluid>
 					<Row>
-						<Col lg="4" md="6" sm="12" className="text-center">
+						<Col lg="4" md="5" sm="6" xs="12" className="text-center">
 							<img src={ portrait } className="aboutme-image" />
 							<div className="aboutme-social">
 								<SocialSection />
 							</div>
 						</Col>
-						<Col lg="8" md="6" sm="12" className="aboutme-content">
+						<Col lg="8" md="7" sm="6" xs="12" className="aboutme-content">
 							<div className="aboutme-title">
 								About Me
 							</div>

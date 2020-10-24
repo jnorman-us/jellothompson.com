@@ -1,0 +1,28 @@
+.skills-header {
+	font-weight: bold;
+	font-size: 48px;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.skills-background {
+	filter: blur(2px) brightness(.7) !important;
+}
+
+.skills-wheel {
+	width: 150px;
+	margin: auto;
+	margin-top: 37.5px;
+}
+
+.skills-wheel-video {
+	width: 225px;
+	margin-top: 0px;
+}
+
+.skills-wheel-description {
+	margin-top: 25px;
+	color: white;
+	font-size: 24px;
+	margin-bottom: 25px;
+}
