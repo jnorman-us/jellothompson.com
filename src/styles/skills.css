@@ -6,7 +6,7 @@
 }
 
 .skills-background {
-	filter: blur(2px) brightness(.7) !important;
+	filter: blur(2px) brightness(1) !important;
 }
 
 .skills-wheel {

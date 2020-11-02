@@ -16,30 +16,31 @@
 }
 
 .reels-video {
-	width: auto;
 	height: 100%;
-	margin: 0;
+	width: 177.77778vh;
+	min-width: 100vw;
+	min-height: 56.25vw;
+	left: 50%; /* % of surrounding element */
+	top: 50%;
+	transform: translate(-50%, -50%); /* % of current element */
+
 
 	position: absolute;
 }
 
+@media (orientation:landscape) {
+
+}
+
 #reels-video-1 {
-	left: 0px;
+	left: calc(150%);
 }
 
 #reels-video-2 {
-	left: -33vw;
+	left: calc(50%);
 }
 #reels-video-3 {
-	left: -66vw;
-}
-
-
-.reel-one {
-	width: 33%;
-	z-index: 1;
-
-	transition: .5s;
+	left: calc(-49%);
 }
 
 .reels-overlay {
@@ -50,25 +51,25 @@
 }
 
 #reels-overlay-one {
-	background-color: rgba(255, 0, 0, .2);
+	background-color: rgba(255, 255, 255, .05);
 }
 #reels-overlay-two {
-	background-color: rgba(0, 255, 0, .2);
+	background-color: rgba(255, 255, 255, .1);
 }
 #reels-overlay-three {
-	background-color: rgba(0, 0, 255, .2);
+	background-color: rgba(255, 255, 255, .05);
 }
 
 .reels-overlay-none {
 	background-color: rgba(0, 0, 0, 0) !important;
 }
 
-.reels-overlay-three {
-	position: absolute;
-	background-color: rgba(0, 0, 255, .35);
-	width: 100%;
-	height: 100%;
-	transition: 1s;
+
+.reel-one {
+	width: 33%;
+	z-index: 1;
+
+	transition: .5s;
 }
 
 .reel-one-shown {

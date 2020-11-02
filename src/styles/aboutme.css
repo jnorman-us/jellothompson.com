@@ -1,5 +1,4 @@
 .aboutme-image {
-
 	width: 100%;
 	height: auto;
 	font-size: 70px;
@@ -13,19 +12,22 @@
 .aboutme-title {
 	font-weight: bold;
 	font-size: 70px;
+	color: rgb(255, 255, 255, 1);
 }
 
 .aboutme-summary {
 	font-weight: 100;
 	font-size: 24px;
 	line-height: 1.8;
-	color: rgb(0, 0, 0, .5);
+	font-weight: bold;
+	color: rgb(255, 255, 255, .6);
 }
 
 .aboutme-text {
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 2.0;
-	color: rgb(0, 0, 0, 1);
+	color: rgb(255, 255, 255, .8);
 	padding-right: 10px;
 }

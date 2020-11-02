@@ -53,7 +53,7 @@ export default class ReelsSection extends React.Component
 			show_three: true,
 		});
 
-		await delay(400);
+		await delay(900);
 
 		this.setState({
 			play: true,

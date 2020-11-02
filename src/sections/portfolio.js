@@ -8,7 +8,7 @@ export default class PortfolioSection extends React.Component
 
 		this.state = {
 			mobile: props.mobile,
-			category: props.category, // 0: all, 1: photos, 2: videos, 3: 
+			category: props.category, // 0: all, 1: photos, 2: videos, 3:
 		};
 	}
 
@@ -17,5 +17,14 @@ export default class PortfolioSection extends React.Component
 		this.setState({
 			mobile: props.mobile,
 		});
+	}
+
+	render()
+	{
+		return (
+			<div>
+				test
+			</div>
+		);
 	}
 }

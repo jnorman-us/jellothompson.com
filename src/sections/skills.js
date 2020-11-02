@@ -53,8 +53,9 @@ export default class SkillsSection extends React.Component
 											styles={ buildStyles({
 												textColor: "white",
 												pathColor: "white",
-												trailColor: "#242424",
+												trailColor: "#fff",
 												strokeLinecap: "butt",
+												transition: "1s",
 											})}
 										/>
 									</div>
@@ -67,7 +68,7 @@ export default class SkillsSection extends React.Component
 											styles={ buildStyles({
 												textColor: "white",
 												pathColor: "white",
-												trailColor: "#242424",
+												trailColor: "#fff",
 												strokeLinecap: "butt",
 											})}
 										/>
@@ -81,7 +82,7 @@ export default class SkillsSection extends React.Component
 											styles={ buildStyles({
 												textColor: "white",
 												pathColor: "white",
-												trailColor: "#242424",
+												trailColor: "#fff",
 												strokeLinecap: "butt",
 											})}
 										/>

@@ -8,18 +8,18 @@ body {
 }
 
 .page {
-	background-color: black;
+	background-color: #222;
 	transition: 1s;
 }
 
 .page-white {
-	background-color: white;
+	background-color: #222;
 	transition: 1s;
 }
 
 .page-content {
 	width: 100%;
-	padding: 35px 10%;
+	padding: 25px 10%;
 
 	height: auto;
 }

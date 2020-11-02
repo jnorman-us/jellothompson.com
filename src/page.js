@@ -4,6 +4,7 @@ import LoadingSection from './sections/loading.js';
 import ReelsSection from './sections/reels.js';
 import AboutMeSection from './sections/about-me.js';
 import SkillsSection from './sections/skills.js';
+import PortfolioSection from './sections/portfolio.js';
 
 import './styles/index.css';
 import './styles/page.css';
@@ -82,8 +83,7 @@ export default class Page extends React.Component
 						<SkillsSection
 							mobile={ mobile }
 						/>
-
-						<AboutMeSection
+						<PortfolioSection
 							mobile={ mobile }
 						/>
 					</div>
