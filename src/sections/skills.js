@@ -40,14 +40,7 @@ export default class SkillsSection extends React.Component
 					<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }` }>
 						<Container fluid className="text-center">
 							<Row>
-								<Col sm={ 12 }>
-									<div className="skills-header">
-										My Skills
-									</div>
-								</Col>
-							</Row>
-							<Row>
-								<Col sm={ 4 }>
+								<Col xs={ 4 }>
 									<div className="skills-wheel">
 										<CircularProgressbar
 											value={ 84 }
@@ -64,7 +57,7 @@ export default class SkillsSection extends React.Component
 										The action or process of moving or being moved.
 									</div>
 								</Col>
-								<Col sm={ 4 }>
+								<Col xs={ 4 }>
 									<div className="skills-wheel skills-wheel-video">
 										<CircularProgressbar
 											value={ 75 }
@@ -81,7 +74,7 @@ export default class SkillsSection extends React.Component
 										The recording, reproducing, or broadcasting of moving visual images
 									</div>
 								</Col>
-								<Col sm={ 4 }>
+								<Col xs={ 4 }>
 									<div className="skills-wheel">
 										<CircularProgressbar
 											value={ 69 }
