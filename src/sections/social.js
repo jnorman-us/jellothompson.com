@@ -18,9 +18,9 @@ export default class SocialSection extends React.Component
 	{
 		return (
 			<div className="social">
-				<SocialIcon className="social-icon" url={ this.url_linkedin } />
-				<SocialIcon className="social-icon" url={ this.url_instagram } />
-				<SocialIcon className="social-icon" url={ this.url_youtube } />
+				<SocialIcon className="social-icon" target="_blank" url={ this.url_linkedin } />
+				<SocialIcon className="social-icon" target="_blank" url={ this.url_instagram } />
+				<SocialIcon className="social-icon" target="_blank" url={ this.url_youtube } />
 			</div>
 		);
 	}

@@ -40,10 +40,15 @@ export default class SkillsSection extends React.Component
 					<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }` }>
 						<Container fluid className="text-center">
 							<Row>
+								<Col className="skills-header">
+									Portfolio
+								</Col>
+							</Row>
+							<Row>
 								<Col xs={ 4 }>
 									<div className="skills-wheel">
 										<CircularProgressbar
-											value={ 84 }
+											value={ 0 }
 											text={ "Motion" }
 											styles={ buildStyles({
 												textColor: "white",
@@ -53,14 +58,11 @@ export default class SkillsSection extends React.Component
 											})}
 										/>
 									</div>
-									<div className="skills-wheel-description">
-										The action or process of moving or being moved.
-									</div>
 								</Col>
 								<Col xs={ 4 }>
-									<div className="skills-wheel skills-wheel-video">
+									<div className="skills-wheel skills-wheel-focused">
 										<CircularProgressbar
-											value={ 75 }
+											value={ 0 }
 											text={ "Video" }
 											styles={ buildStyles({
 												textColor: "white",
@@ -70,14 +72,11 @@ export default class SkillsSection extends React.Component
 											})}
 										/>
 									</div>
-									<div className="skills-wheel-description">
-										The recording, reproducing, or broadcasting of moving visual images
-									</div>
 								</Col>
 								<Col xs={ 4 }>
 									<div className="skills-wheel">
 										<CircularProgressbar
-											value={ 69 }
+											value={ 0 }
 											text={ "Design" }
 											styles={ buildStyles({
 												textColor: "white",
@@ -86,9 +85,6 @@ export default class SkillsSection extends React.Component
 												strokeLinecap: "butt",
 											})}
 										/>
-									</div>
-									<div className="skills-wheel-description">
-										An arrangement of lines or shapes created to form a pattern or decoration.
 									</div>
 								</Col>
 							</Row>

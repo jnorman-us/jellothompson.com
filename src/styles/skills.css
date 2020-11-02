@@ -2,7 +2,7 @@
 	font-weight: bold;
 	font-size: 48px;
 	color: white;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 }
 
 .skills-background {
@@ -10,14 +10,14 @@
 }
 
 .skills-wheel {
-	width: 150px;
+	width: 100px;
 	margin: auto;
-	margin-top: 37.5px;
+	font-weight: bold;
 }
 
-.skills-wheel-video {
-	width: 225px;
-	margin-top: 0px;
+.skills-wheel-focused {
+	width: 150px;
+	margin-top: -25px;
 }
 
 .skills-wheel-description {
