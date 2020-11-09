@@ -1,13 +1,10 @@
 import React from 'react';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { Parallax, Background } from 'react-parallax';
-import { Container, Row, Col } from 'react-bootstrap';
 
-
-import background from '../images/background.png';
-
-import 'react-circular-progressbar/dist/styles.css';
 import '../styles/skills.css';
+
+import videographer from '../images/videographer.jpg';
+import motion from '../images/motion.jpg';
+import design from '../images/design.jpeg';
 
 export default class SkillsSection extends React.Component
 {
@@ -29,69 +26,20 @@ export default class SkillsSection extends React.Component
 
 	render()
 	{
-		const mobile = this.state.mobile;
+		this.mobile = this.state.mobile;
 
 		return (
-				<Parallax
-					bgImage={ background }
-					strength={ 500 }
-					bgClassName="skills-background"
-				>
-					<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }` }>
-						<Container fluid className="text-center">
-							<Row>
-								<Col className="skills-header">
-									Portfolio
-								</Col>
-							</Row>
-							<Row>
-								<Col xs={ 4 }>
-									<div className="skills-wheel">
-										<CircularProgressbar
-											value={ 0 }
-											text={ "Motion" }
-											styles={ buildStyles({
-												textColor: "white",
-												pathColor: "white",
-												trailColor: "#fff",
-												strokeLinecap: "butt",
-												transition: "1s",
-											})}
-										/>
-									</div>
-								</Col>
-								<Col xs={ 4 }>
-									<div className="skills-wheel skills-wheel-focused">
-										<CircularProgressbar
-											value={ 0 }
-											text={ "Video" }
-											styles={ buildStyles({
-												textColor: "white",
-												pathColor: "white",
-												trailColor: "#fff",
-												strokeLinecap: "butt",
-											})}
-										/>
-									</div>
-								</Col>
-								<Col xs={ 4 }>
-									<div className="skills-wheel">
-										<CircularProgressbar
-											value={ 0 }
-											text={ "Design" }
-											styles={ buildStyles({
-												textColor: "white",
-												pathColor: "white",
-												trailColor: "#fff",
-												strokeLinecap: "butt",
-											})}
-										/>
-									</div>
-								</Col>
-							</Row>
-						</Container>
-					</div>
-				</Parallax>
+			<div className="skills">
+				<div className="skills-section">
+					<img src={ videographer } className="skills-photo" id="section1" />
+				</div>
+				<div className="skills-section">
+					test
+				</div>
+				<div className="skills-section">
+
+				</div>
+			</div>
 		);
 	}
 }
