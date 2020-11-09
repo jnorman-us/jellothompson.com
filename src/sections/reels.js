@@ -70,7 +70,8 @@ export default class ReelsSection extends React.Component
 	{
 		//
 		// ## TODO ##
-		// Make the video items center on the page...
+		// Maybe swap out the 3 videos and just have the one video in the background
+		// So that there are no more consistancy bugs
 		//
 		const show_one = this.state.show_one;
 		const show_two = this.state.show_two;

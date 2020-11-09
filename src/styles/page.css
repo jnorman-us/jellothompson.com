@@ -5,15 +5,16 @@
 
 body {
 	font-family: Kiona;
+	color: white;
 }
 
 .page {
-	background-color: #222;
+	background-color: #111;
 	transition: 1s;
 }
 
 .page-white {
-	background-color: #222;
+	background-color: #111;
 	transition: 1s;
 }
 
