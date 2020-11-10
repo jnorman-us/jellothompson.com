@@ -117,7 +117,7 @@ export default class Page extends React.Component
 
 	handleScroll(e)
 	{
-		console.log(window.scrollY);
+		//console.log(window.scrollY);
 		e.preventDefault();
 	}
 }

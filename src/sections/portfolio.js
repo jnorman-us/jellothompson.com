@@ -45,12 +45,6 @@ export default class PortfolioSection extends React.Component
 							image="good-mourning.webp"
 						/>
 					</XBlock>
-					<XBlock>
-						<PortfolioCardSection />
-					</XBlock>
-					<XBlock>
-						<PortfolioCardSection />
-					</XBlock>
 				</XMasonry>
 			</div>
 		);

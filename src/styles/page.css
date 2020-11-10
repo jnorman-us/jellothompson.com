@@ -9,23 +9,23 @@ body {
 }
 
 .page {
-	background-color: #111;
+	background-color: #000;
 	transition: 1s;
 }
 
 .page-white {
-	background-color: #111;
+	background-color: #000;
 	transition: 1s;
 }
 
 .page-content {
 	width: 100%;
-	padding: 25px 10%;
+	padding: 60px 10%;
 
 	height: auto;
 }
 
 .page-content-mobile {
 	width: calc(100% - 20px);
-	padding: 30px 10px;
+	padding: 60px 10px;
 }
