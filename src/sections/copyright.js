@@ -52,7 +52,7 @@ export default class CopyrightSection extends React.Component
 						{ this.renderLink("contactme", "Contact Me") }
 					</div>
 					<div className="copyright-text">
-						Copyright &copy; { current_year } JT Visuals LLC.
+						Copyright &copy; { current_year } Jello Thompson.
 						All Rights Reserved.
 					</div>
 					<div className="copyright-socials">
