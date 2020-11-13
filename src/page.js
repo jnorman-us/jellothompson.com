@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Element } from 'react-scroll'
 
 import LoadingSection from './sections/loading.js';
 import ReelsSection from './sections/reels.js';
@@ -6,6 +7,7 @@ import AboutMeSection from './sections/about-me.js';
 import SkillsSection from './sections/skills.js';
 import PortfolioSection from './sections/portfolio.js';
 import ContactMeSection from './sections/contactme.js';
+import CopyrightSection from './sections/copyright.js';
 
 import './styles/index.css';
 import './styles/page.css';
@@ -74,20 +76,33 @@ export default class Page extends React.Component
 				} </>
 				<> { displaying &&
 					<div>
-						<ReelsSection
-							mobile={ mobile }
-							onSlided={ this.handleSlided.bind(this) }
-						/>
-						<AboutMeSection
-							mobile={ mobile }
-						/>
-						<SkillsSection
-							mobile={ mobile }
-						/>
-						<PortfolioSection
-							mobile={ mobile }
-						/>
-						<ContactMeSection
+						<Element name="reels">
+							<ReelsSection
+								mobile={ mobile }
+								onSlided={ this.handleSlided.bind(this) }
+							/>
+						</Element>
+						<Element name="aboutme">
+							<AboutMeSection
+								mobile={ mobile }
+							/>
+						</Element>
+						<Element name="skills">
+							<SkillsSection
+								mobile={ mobile }
+							/>
+						</Element>
+						<Element name="portfolio">
+							<PortfolioSection
+								mobile={ mobile }
+							/>
+						</Element>
+						<Element name="contactme">
+							<ContactMeSection
+								mobile={ mobile }
+							/>
+						</Element>
+						<CopyrightSection
 							mobile={ mobile }
 						/>
 					</div>

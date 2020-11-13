@@ -1,0 +1,24 @@
+.copyright {
+	font-size: 14px;
+	text-align: center;
+}
+
+.copyright-menu {
+	font-size: 18px;
+}
+
+.copyright-menu-link {
+	cursor: pointer;
+}
+
+.copyright-menu-link:hover {
+	text-decoration: underline !important;
+}
+
+.copyright-socials {
+	margin-top: 15px;
+}
+
+.copyright-text {
+	margin-top: 15px;
+}
