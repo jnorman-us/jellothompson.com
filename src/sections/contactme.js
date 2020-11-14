@@ -1,7 +1,8 @@
 import React from 'react';
+import EmailJS from 'emailjs-com';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { Parallax, Background } from 'react-parallax';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 
 
 import background from '../images/background.png';
@@ -38,55 +39,37 @@ export default class ContactMeSection extends React.Component
 					bgClassName="contactme-background"
 				>
 					<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }` }>
-						<Container fluid className="text-center">
+						<Container fluid className="contactme">
 							<Row>
-								<Col className="contactme-header">
-									Portfolio
+								<Col xl={ 3 } lg={ 2 } md={ 1 } sm={ 0 }>
+
 								</Col>
-							</Row>
-							<Row>
-								<Col xs={ 4 }>
-									<div className="contactme-wheel">
-										<CircularProgressbar
-											value={ 0 }
-											text={ "Motion" }
-											styles={ buildStyles({
-												textColor: "white",
-												pathColor: "white",
-												trailColor: "#fff",
-												strokeLinecap: "butt",
-												transition: "1s",
-											})}
-										/>
-									</div>
-								</Col>
-								<Col xs={ 4 }>
-									<div className="contactme-wheel contactme-wheel-focused">
-										<CircularProgressbar
-											value={ 0 }
-											text={ "Video" }
-											styles={ buildStyles({
-												textColor: "white",
-												pathColor: "white",
-												trailColor: "#fff",
-												strokeLinecap: "butt",
-											})}
-										/>
-									</div>
-								</Col>
-								<Col xs={ 4 }>
-									<div className="contactme-wheel">
-										<CircularProgressbar
-											value={ 0 }
-											text={ "Design" }
-											styles={ buildStyles({
-												textColor: "white",
-												pathColor: "white",
-												trailColor: "#fff",
-												strokeLinecap: "butt",
-											})}
-										/>
-									</div>
+								<Col xl={ 6 } lg={ 8 } md={ 10 } sm={ 12 }>
+									<Card className="bg">
+										<Card.Header>Contact Me</Card.Header>
+										<Card.Body className="contactme-content">
+											<Card.Text>
+												Send me an email about any business deals you want me to manage,
+												I am very good at business dealings and such. No need to worry about
+												your business
+											</Card.Text>
+											<Form>
+												<Form.Group controlId="user_name">
+													<Form.Label> Name </Form.Label>
+													<Form.Control type="text" placeholder="John Smith" />
+												</Form.Group>
+												<Form.Group controlId="email">
+													<Form.Label> Email </Form.Label>
+													<Form.Control type="text" placeholder="example@email.com" />
+												</Form.Group>
+												<Form.Group controlId="message">
+													<Form.Label>Message</Form.Label>
+													<Form.Control as="textarea" rows={5} />
+												</Form.Group>
+											</Form>
+											<Button variant="dark">Send</Button>
+										</Card.Body>
+									</Card>
 								</Col>
 							</Row>
 						</Container>
