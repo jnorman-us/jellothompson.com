@@ -67,16 +67,18 @@ export default class SkillsSection extends React.Component
 					backgroundImage: `url( ${ image })`,
 				}} />
 				<div className="skills-section-content">
-					<CircularProgressbar
-						value={ skill_val }
-						text={ title }
-						styles={ buildStyles({
-							textColor: "white",
-							pathColor: "white",
-							trailColor: "transparent",
-							transition: this.transition_period,
-						})}
-					/>
+					<div className="skills-section-content-circle">
+						<CircularProgressbar
+							value={ skill_val }
+							text={ title }
+							styles={ buildStyles({
+								textColor: "white",
+								pathColor: "white",
+								trailColor: "transparent",
+								transition: this.transition_period,
+							})}
+						/>
+					</div>
 					<div className="skills-section-content-text">
 						{ description }
 					</div>
