@@ -44,10 +44,10 @@ export default class AboutMeSection extends React.Component
 								About Me
 							</div>
 							<div className="aboutme-summary">
-								I'm a Navy Seal, don't Fuck with me.
+								Hello! I'm a Post-Production aficionado
 							</div>
 							<div className="aboutme-text py-3">
-								I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I'm the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You're fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that's just with my bare hands. Not only am I extensively trained in unarmed combat, but I...
+								  ...and editor, though I would consider myself a storyteller more than a filmmaker. My strengths are in my ability in finding a story to tell in the art of the cut. I am very technical, and well versed with Adobe Premiere, After Effects, DaVinci Resolve, Avid Media Composer, and Pro Tools. Every day, I am constantly learning new techniques and skills to better improve as an editor and storyteller. My experience involves extends beyond the visual edit, but designing motion graphics, color grading, and sound design.
 							</div>
 						</Col>
 					</Row>
