@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
+import delay from './utils/delay.js';
+
 import './styles/menu.css';
 
 import logo from './images/logo.png';
@@ -13,77 +15,82 @@ export default class Menu extends React.Component
 
 		this.state = {
 			mobile: false,
-			open: false,
+			fixed: false,
+			fixed_animation: false,
 		};
+
+		this.componentWillReceiveProps(props);
 	}
 
-	componentDidMount()
-	{
-		window.addEventListener('resize', this.barResize.bind(this));
-	}
-
-	hamburgerClick()
+	async componentWillReceiveProps(props)
 	{
 
-	}
+		this.setState({
+			mobile: props.mobile,
+		});
 
-	barResize()
-	{
-		const mobileWidth = 850;
-
-		const width = window.innerWidth;
-
-		if(width <= mobileWidth)
+		if(!this.state.fixed && props.fixed)
 		{
 			this.setState({
-				mobile: true,
+				fixed: true,
+			});
+
+			await delay(100);
+
+			this.setState({
+				fixed_animation: true,
 			});
 		}
-		else
+		else if(this.state.fixed && !props.fixed)
 		{
 			this.setState({
-				mobile: false,
+				fixed_animation: false,
+			});
+
+			await delay(250);
+
+			this.setState({
+				fixed: false,
 			});
 		}
+
+	}
+
+	renderLink(to, title)
+	{
+		return (
+			<Link
+				activeClass="menu-link-active"
+				className="menu-link"
+				to={ to }
+				smooth={ true }
+			>{ title }</Link>
+		);
 	}
 
 	render()
 	{
-		const white = this.props.white;
+		const mobile = this.state.mobile;
+		const fixed = this.state.fixed;
+		const fixed_animation = this.state.fixed_animation;
+
+		const menu_class = `menu
+			${ mobile ? 'menu-mobile' : '' }
+			${ fixed ? 'menu-fixed' : '' }
+			${ fixed_animation ? 'menu-fixed-in' : '' }`;
 
 		return (
-			<div className="menu">
-				<img className={ `menu-logo ${ white ? 'menu-logo-inverted' : '' }`} src={ logo } />
-				<div className="menu-selection-section">
-					<> { !this.state.mobile &&
-						<div>
-							<div className="menu-selection">
-								<Link to="about-me-section" smooth={ true }>
-									About Me
-								</Link>
-							</div>
-							<div className="menu-selection">
-								<Link to="reel-section" smooth={ true }>
-									Reel
-								</Link>
-							</div>
-							<div className="menu-selection">
-								<Link to="portfolio-section" smooth={ true }>
-									Portfolio
-								</Link>
-							</div>
-							<div className="menu-selection">
-								<Link to="contact-me-section" smooth={ true }>
-									Contact Me
-								</Link>
-							</div>
-						</div>
-					} { this.state.mobile &&
-						<div>
-							show a hamburger here
-						</div>
-					}</>
-				</div>
+			<div className={ menu_class }>
+				<img className="menu-logo" src={ logo } />
+				<> { !this.state.mobile &&
+					<div className="menu-links">
+						{ this.renderLink("reels", "Reel") } &nbsp;
+						{ this.renderLink("aboutme", "About Me") } &nbsp;
+						{ this.renderLink("skills", "Skill") } &nbsp;
+						{ this.renderLink("portfolio", "Portfolio") } &nbsp;
+						{ this.renderLink("contactme", "Contact Me") } &nbsp;
+					</div>
+				} </>
 			</div>
 		);
 	}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, Element } from 'react-scroll'
 
+import Menu from './menu.js';
+
 import LoadingSection from './sections/loading.js';
 import ReelsSection from './sections/reels.js';
 import AboutMeSection from './sections/about-me.js';
@@ -23,6 +25,7 @@ export default class Page extends React.Component
 			displaying: false,
 			slided: false,
 			mobile: false,
+			menu_fixed: false,
 		};
 	}
 
@@ -64,6 +67,7 @@ export default class Page extends React.Component
 		const loading = this.state.loading;
 		const displaying = this.state.displaying;
 		const slided = this.state.slided;
+		const menu_fixed = this.state.menu_fixed;
 
 		return (
 			<div className={ `page ${ slided ? 'page-white' : '' }`}>
@@ -76,6 +80,10 @@ export default class Page extends React.Component
 				} </>
 				<> { displaying &&
 					<div>
+						<Menu
+							mobile={ mobile }
+							fixed={ menu_fixed }
+						/>
 						<Element name="reels">
 							<ReelsSection
 								mobile={ mobile }
@@ -133,6 +141,18 @@ export default class Page extends React.Component
 	handleScroll(e)
 	{
 		//console.log(window.scrollY);
-		e.preventDefault();
+
+		if(window.scrollY >= window.innerHeight)
+		{
+			this.setState({
+				menu_fixed: true,
+			});
+		}
+		else
+		{
+			this.setState({
+				menu_fixed: false,
+			});
+		}
 	}
 }
