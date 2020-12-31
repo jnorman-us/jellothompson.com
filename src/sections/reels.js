@@ -13,6 +13,7 @@ export default class ReelsSection extends React.Component
 
 		this.onSlided = props.onSlided;
 
+		this.video_main = React.createRef();
 		this.video_1 = React.createRef();
 		this.video_2 = React.createRef();
 		this.video_3 = React.createRef();
@@ -22,6 +23,7 @@ export default class ReelsSection extends React.Component
 			show_one: false,
 			show_two: false,
 			show_three: false,
+			show_main: false,
 			play: false,
 		};
 	}
@@ -35,6 +37,11 @@ export default class ReelsSection extends React.Component
 
 	async componentDidMount()
 	{
+		this.video_1.current.currentTime = .065;
+		this.video_2.current.currentTime = .065;
+		this.video_3.current.currentTime = .065;
+		this.video_main.current.currentTime = .065;
+
 		await delay(300);
 
 		this.setState({
@@ -53,15 +60,18 @@ export default class ReelsSection extends React.Component
 			show_three: true,
 		});
 
-		await delay(900);
+		await delay(1000);
 
 		this.setState({
 			play: true,
 		});
 
-		this.video_1.current.play();
-		this.video_2.current.play();
-		this.video_3.current.play();
+		this.video_main.current.play();
+
+		this.setState({
+			show_main: true,
+		});
+
 
 		this.onSlided();
 	}
@@ -73,11 +83,13 @@ export default class ReelsSection extends React.Component
 		// Maybe swap out the 3 videos and just have the one video in the background
 		// So that there are no more consistancy bugs
 		//
+		const show_main = this.state.show_main;
 		const show_one = this.state.show_one;
 		const show_two = this.state.show_two;
 		const show_three = this.state.show_three;
 		const play = this.state.play;
 
+		const reel_main_class = `reels-reel reel-main ${ show_main ? 'reel-main-shown' : '' }`;
 		const reel_one_class = `reels-reel reel-one ${ show_one ? 'reel-one-shown' : '' }`;
 		const reel_two_class = `reels-reel reel-two ${ show_two ? 'reel-two-shown' : '' }`;
 		const reel_three_class = `reels-reel reel-three ${ show_three ? 'reel-three-shown' : '' }`;
@@ -120,6 +132,14 @@ export default class ReelsSection extends React.Component
 					<div
 						id="reels-overlay-three"
 						className={ reel_overlay_class }
+					/>
+				</div>
+				<div className={ reel_main_class }>
+					<video
+						id="reels-video-main"
+						className="reels-video"
+						ref={ this.video_main }
+						muted loop src={ motion_video }
 					/>
 				</div>
 			</div>

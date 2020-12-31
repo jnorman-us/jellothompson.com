@@ -51,13 +51,13 @@
 }
 
 #reels-overlay-one {
-	background-color: rgba(255, 255, 255, .05);
+	background-color: rgba(255, 255, 255, 0);
 }
 #reels-overlay-two {
-	background-color: rgba(255, 255, 255, .2);
+	background-color: rgba(255, 255, 255, 0);
 }
 #reels-overlay-three {
-	background-color: rgba(255, 255, 255, .05);
+	background-color: rgba(255, 255, 255, 0);
 }
 
 .reels-overlay-none {
@@ -96,4 +96,18 @@
 
 .reel-three-shown {
 	left: 66%;
+}
+
+.reel-main {
+	z-index: 3;
+	width: 100%;
+	z-index: 4;
+	left: 0%;
+	opacity: 0%;
+}
+
+.reel-main-shown {
+	left: 0%;
+	z-index: 4;
+	opacity: 100%;
 }

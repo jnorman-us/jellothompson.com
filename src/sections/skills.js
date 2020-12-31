@@ -3,9 +3,9 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 import '../styles/skills.css';
 
-import design from '../images/skills/design.jpg';
-import motion from '../images/skills/motion.jpg';
-import videographer from '../images/skills/videographer.jpg';
+import editing from '../images/skills/editing.jpg';
+import vfx from '../images/skills/vfx.jpg';
+import audio from '../images/skills/audio.jpg';
 
 export default class SkillsSection extends React.Component
 {
@@ -14,15 +14,15 @@ export default class SkillsSection extends React.Component
 		super(props);
 
 		this.transition_period = ".3s";
-		this.motion_full = 84;
-		this.video_full = 75;
-		this.design_full = 69;
+		this.editing_full = 84;
+		this.vfx_full = 75;
+		this.audio_full = 69;
 
 		this.state = {
 			mobile: props.mobile,
-			motion_val: 0,
-			video_val: 0,
-			design_val: 0,
+			editing_val: 0,
+			vfx_val: 0,
+			audio_val: 0,
 		};
 	}
 
@@ -35,22 +35,22 @@ export default class SkillsSection extends React.Component
 
 	handleHover(section, inside)
 	{
-		if(section == "Motion")
+		if(section == "Editing")
 		{
 			this.setState({
-				motion_val: inside ? this.motion_full : 0,
+				editing_val: inside ? this.editing_full : 0,
 			});
 		}
-		else if(section == "Video")
+		else if(section == "VFX")
 		{
 			this.setState({
-				video_val: inside ? this.video_full : 0,
+				vfx_val: inside ? this.vfx_full : 0,
 			});
 		}
-		else if(section == "Design")
+		else if(section == "Audio")
 		{
 			this.setState({
-				design_val: inside ? this.design_full : 0,
+				audio_val: inside ? this.audio_full : 0,
 			});
 		}
 	}
@@ -94,21 +94,21 @@ export default class SkillsSection extends React.Component
 		return (
 			<div className="skills">
 				{ this.renderSection(
-					"Motion",
-					motion,
-					this.state.motion_val,
-					"The art of making stuff move, be it a puppet via strings or a car by steering wheel",
-				) }
-				{ this.renderSection(
-					"Video",
-					videographer,
-					this.state.video_val,
+					"VFX",
+					vfx,
+					this.state.vfx_val,
 					"The movement of pixels on a screen, and the camera that captures them.",
 				) }
 				{ this.renderSection(
-					"Design",
-					design,
-					this.state.design_val,
+					"Editing",
+					editing,
+					this.state.editing_val,
+					"The art of making stuff move, be it a puppet via strings or a car by steering wheel",
+				) }
+				{ this.renderSection(
+					"Audio",
+					audio,
+					this.state.audio_val,
 					"You know what Joseph's really good at. Me neither",
 				) }
 			</div>
