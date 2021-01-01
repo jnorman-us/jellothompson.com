@@ -4,6 +4,11 @@
 	height: 100vh;
 }
 
+.reels-content {
+	position: absolute;
+
+}
+
 .reels-reel {
 	position: absolute;
 	width: 33%;

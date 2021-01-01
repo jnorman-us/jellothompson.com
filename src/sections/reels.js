@@ -142,6 +142,9 @@ export default class ReelsSection extends React.Component
 						muted loop src={ motion_video }
 					/>
 				</div>
+				<div className="reels-content">
+					test
+				</div>
 			</div>
 		);
 	}

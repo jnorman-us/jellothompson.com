@@ -35,7 +35,7 @@ export default class ContactMeSection extends React.Component
 		return (
 				<Parallax
 					bgImage={ background }
-					strength={ 500 }
+					strength={ 1000 }
 					bgClassName="contactme-background"
 				>
 					<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }` }>

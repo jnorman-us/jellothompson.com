@@ -57,7 +57,6 @@ export default class Menu extends React.Component
 				fixed: false,
 			});
 		}
-
 	}
 
 	renderLink(to, title)

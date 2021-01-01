@@ -2,10 +2,12 @@
 	margin-top: 0px;
 	width: 100%;
 	text-align: center;
+
 }
 
 .social-icon {
 	width: 20px;
 	height: 20px;
-	margin: 0px 10px;
+	margin: 0px 0px;
+	transform: scale(.8);
 }
