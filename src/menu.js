@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
+import SocialSection from './sections/social.js';
+
 import delay from './utils/delay.js';
 
 import './styles/menu.css';
@@ -15,6 +17,7 @@ export default class Menu extends React.Component
 
 		this.state = {
 			mobile: false,
+			shown: false,
 			fixed: false,
 			fixed_animation: false,
 		};
@@ -27,6 +30,7 @@ export default class Menu extends React.Component
 
 		this.setState({
 			mobile: props.mobile,
+			shown: props.shown,
 		});
 
 		if(!this.state.fixed && props.fixed)
@@ -47,7 +51,7 @@ export default class Menu extends React.Component
 				fixed_animation: false,
 			});
 
-			await delay(250);
+			await delay(500);
 
 			this.setState({
 				fixed: false,
@@ -71,10 +75,12 @@ export default class Menu extends React.Component
 	render()
 	{
 		const mobile = this.state.mobile;
+		const shown = this.state.shown;
 		const fixed = this.state.fixed;
 		const fixed_animation = this.state.fixed_animation;
 
 		const menu_class = `menu
+			${ shown ? 'menu-shown' : '' }
 			${ mobile ? 'menu-mobile' : '' }
 			${ fixed ? 'menu-fixed' : '' }
 			${ fixed_animation ? 'menu-fixed-in' : '' }`;
@@ -82,13 +88,15 @@ export default class Menu extends React.Component
 		return (
 			<div className={ menu_class }>
 				<img className="menu-logo" src={ logo } />
-				<> { !this.state.mobile &&
+				<div className="menu-links">
+					<SocialSection />
+				</div>
+				<> { false &&
 					<div className="menu-links">
-						{ this.renderLink("reels", "Reel") } &nbsp;
-						{ this.renderLink("aboutme", "About Me") } &nbsp;
-						{ this.renderLink("skills", "Skill") } &nbsp;
-						{ this.renderLink("portfolio", "Portfolio") } &nbsp;
-						{ this.renderLink("contactme", "Contact Me") } &nbsp;
+						{ this.renderLink("aboutme", "About Me") }
+						{ this.renderLink("skills", "Skills") }
+						{ this.renderLink("portfolio", "Portfolio") }
+						{ this.renderLink("contactme", "Contact Me") }
 					</div>
 				} </>
 			</div>

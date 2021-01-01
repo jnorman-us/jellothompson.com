@@ -5,7 +5,14 @@
 	padding: 0px 10%;
 	z-index: 5;
 
-	transition: top .25s;
+	transition: .5s;
+	text-shadow: 1.5px 1.5px 0 #333;
+
+	filter: opacity(0%);
+}
+
+.menu-shown {
+	filter: opacity(100%);
 }
 
 .menu-mobile {
@@ -17,6 +24,7 @@
 	position: fixed;
 	top: -80px;
 	background-color: black;
+	text-shadow: none;
 }
 
 .menu-fixed-in {
@@ -30,15 +38,19 @@
 	height: calc(100% - 10px);
 	width: auto;
 	margin: 5px 0px;
+
+	display:inline-block;
+	float: left;
 }
 
 .menu-links {
-	width: auto;
-	font-size: 24px;
-	letter-spacing: -1px;
+	margin-top: 15px;
+	display:inline-block;
+	float: right;
 }
 
 .menu-link {
+	margin-right: 0%;
 	cursor: pointer;
 }
 

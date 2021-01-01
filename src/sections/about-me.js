@@ -35,9 +35,6 @@ export default class AboutMeSection extends React.Component
 					<Row>
 						<Col lg="3" md="4" sm="6" xs="12" className="text-center">
 							<img src={ portrait } className="aboutme-image" />
-							<div className="aboutme-social">
-								<SocialSection />
-							</div>
 						</Col>
 						<Col lg="9" md="8" sm="6" xs="12" className="aboutme-content">
 							<div className="aboutme-title">

@@ -82,6 +82,7 @@ export default class Page extends React.Component
 					<div>
 						<Menu
 							mobile={ mobile }
+							shown={ slided }
 							fixed={ menu_fixed }
 						/>
 						<Element name="reels">
