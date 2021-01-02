@@ -86,7 +86,7 @@ export default class Menu extends React.Component
 
 		return (
 			<div className={ menu_class }>
-				<img className="menu-logo" src={ logo } />
+				<a href="https://jellothompson.com"><img className="menu-logo" src={ logo } /></a>
 				<div className="menu-links">
 					<SocialSection />
 				</div>
