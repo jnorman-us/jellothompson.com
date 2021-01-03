@@ -28,6 +28,15 @@ export default class ContactMeSection extends React.Component
 		});
 	}
 
+	async sendEmail(e)
+	{
+		e.preventDefault();
+
+		const result = await EmailJS.sendForm('service_owl7xjn', 'template_w4mhu1e', e.target, 'user_nzZKA4wORujISbp6zChkV');
+
+		alert('Email Sent!');
+	}
+
 	render()
 	{
 		const mobile = this.state.mobile;
@@ -45,29 +54,28 @@ export default class ContactMeSection extends React.Component
 
 								</Col>
 								<Col xl={ 6 } lg={ 8 } md={ 10 } sm={ 12 }>
-									<Card className="bg">
+									<Card bg="">
 										<Card.Header>Contact Me</Card.Header>
 										<Card.Body className="contactme-content">
 											<Card.Text>
-												Send me an email about any business deals you want me to manage,
-												I am very good at business dealings and such. No need to worry about
-												your business
+												Send me an email if you want to collaborate, and I'll be happy to respond
 											</Card.Text>
-											<Form>
-												<Form.Group controlId="user_name">
+											<Form onSubmit={ this.sendEmail.bind(this) }>
+												<input type="hidden" name="to_name" value="Jello Thompson" />
+												<Form.Group controlId="from_name">
 													<Form.Label> Name </Form.Label>
-													<Form.Control type="text" placeholder="John Smith" />
+													<Form.Control name="from_name" type="text" placeholder="John Smith" />
 												</Form.Group>
-												<Form.Group controlId="email">
+												<Form.Group controlId="reply_to">
 													<Form.Label> Email </Form.Label>
-													<Form.Control type="text" placeholder="example@email.com" />
+													<Form.Control name="reply_to" type="text" placeholder="example@email.com" />
 												</Form.Group>
 												<Form.Group controlId="message">
 													<Form.Label>Message</Form.Label>
-													<Form.Control as="textarea" rows={5} />
+													<Form.Control name="message" as="textarea" rows={5} />
 												</Form.Group>
+												<Button variant="dark" type="submit">Send</Button>
 											</Form>
-											<Button variant="dark">Send</Button>
 										</Card.Body>
 									</Card>
 								</Col>
