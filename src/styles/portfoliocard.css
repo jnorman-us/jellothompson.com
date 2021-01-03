@@ -1,5 +1,11 @@
+.portfolio-header {
+	font-size: 48px;
+	margin-bottom: 15px;
+}
+
 .portfoliocard-header {
-	font-size: 20px;;;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .portfoliocard-content {

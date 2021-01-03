@@ -97,19 +97,19 @@ export default class SkillsSection extends React.Component
 					"VFX",
 					vfx,
 					this.state.vfx_val,
-					"The movement of pixels on a screen, and the camera that captures them.",
+					"The integrations are of live action footage and CG elements to create realistic imagery",
 				) }
 				{ this.renderSection(
 					"Editing",
 					editing,
 					this.state.editing_val,
-					"The art of making stuff move, be it a puppet via strings or a car by steering wheel",
+					"Both a creative and a technical part of the post-production process of filmmaking",
 				) }
 				{ this.renderSection(
 					"Audio",
 					audio,
 					this.state.audio_val,
-					"You know what Joseph's really good at. Me neither",
+					"Balancing and adjusting sound sources in a reinforcement of sound",
 				) }
 			</div>
 		);

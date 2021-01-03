@@ -1,6 +1,9 @@
 .aboutme-image {
 	width: 100%;
 	height: auto;
+
+	max-width: 300px;
+
 	font-size: 70px;
 	padding-top: 1em;
 }
