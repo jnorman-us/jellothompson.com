@@ -15,7 +15,6 @@ export default class CreditsSection extends React.Component
 
 	render()
 	{
-		console.log(this.first);
 		return (
 			<div className="credits">
 				<> { !this.first && "| " }</>{ this.skill }&nbsp;
