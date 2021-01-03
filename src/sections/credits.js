@@ -10,14 +10,16 @@ export default class CreditsSection extends React.Component
 		super(props);
 
 		this.skill = props.skill;
+		this.first = props.first;
 	}
 
 	render()
 	{
+		console.log(this.first);
 		return (
-			<Badge className="credits" pill variant="light">
-				{ this.skill }
-			</Badge>
+			<div className="credits">
+				<> { !this.first && "| " }</>{ this.skill }&nbsp;
+			</div>
 		);
 	}
 }

@@ -13,9 +13,7 @@ export default class PortfolioCard extends React.Component
 
 		// something about
 		this.title = props.title;
-		this.image = props.image;
 		this.year = props.year;
-		this.description = props.description;
 		this.credits = props.credits;
 	}
 
@@ -23,13 +21,19 @@ export default class PortfolioCard extends React.Component
 	{
 		const elements = [];
 
+		var first = true;
 		for(const credit of this.credits)
 		{
 			elements.push(
 				<CreditsSection
+					first={ first }
 					skill={ credit }
 				/>
 			);
+			if(first == true)
+			{
+				first = false;
+			}
 		}
 		return elements;
 	}
@@ -37,26 +41,14 @@ export default class PortfolioCard extends React.Component
 	render()
 	{
 		return (
-			<Card bg="dark" className="portfoliocard">
-				<Card.Header className="portfoliocard-header">
-			 		{ this.title } ({ this.year })
-				</Card.Header>
-				<> { this.image != null &&
-					<Card.Img className="portfoliocard-image" src={ this.image } />
-				} </>
-				<> { this.description != null &&
-					<Card.Body className="portfoliocard-content">
-							<Card.Text>
-								{ this.description }
-							</Card.Text>
-					</Card.Body>
-				} </>
-				<> { this.credits != null &&
-					<Card.Footer>
-						{ this.renderCredits() }
-					</Card.Footer>
-				} </>
-			</Card>
+			<div className="portfoliocard">
+				<div className="portfoliocard-header">
+					{ this.title } ({ this.year })
+				</div>
+				<div className="portfoliocard-content">
+					{ this.renderCredits() }
+				</div>
+			</div>
 		);
 	}
 }
