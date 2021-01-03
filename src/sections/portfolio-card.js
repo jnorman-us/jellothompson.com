@@ -42,15 +42,15 @@ export default class PortfolioCard extends React.Component
 			 		{ this.title } ({ this.year })
 				</Card.Header>
 				<> { this.image != null &&
-					<Card.Img src={ this.image } />
+					<Card.Img className="portfoliocard-image" src={ this.image } />
 				} </>
-				<Card.Body className="portfoliocard-content">
-					<> { this.description != null &&
-						<Card.Text>
-							{ this.description }
-						</Card.Text>
-					} </>
-				</Card.Body>
+				<> { this.description != null &&
+					<Card.Body className="portfoliocard-content">
+							<Card.Text>
+								{ this.description }
+							</Card.Text>
+					</Card.Body>
+				} </>
 				<> { this.credits != null &&
 					<Card.Footer>
 						{ this.renderCredits() }
