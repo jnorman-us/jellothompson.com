@@ -1,13 +1,10 @@
 import React from 'react';
 import EmailJS from 'emailjs-com';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { Parallax, Background } from 'react-parallax';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 
-
 import background from '../images/background.png';
 
-import 'react-circular-progressbar/dist/styles.css';
 import '../styles/contactme.css';
 
 export default class ContactMeSection extends React.Component

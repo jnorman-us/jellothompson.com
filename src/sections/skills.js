@@ -2,6 +2,7 @@ import React from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 import '../styles/skills.css';
+import 'react-circular-progressbar/dist/styles.css';
 
 import editing from '../images/skills/editing.jpg';
 import vfx from '../images/skills/vfx.jpg';

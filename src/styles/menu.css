@@ -16,7 +16,7 @@
 }
 
 .menu-mobile {
-	width: calc(100% - 0px);
+	width: calc(100vw - 0px);
 	padding: 0px 10px;
 }
 

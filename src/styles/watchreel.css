@@ -1,0 +1,42 @@
+.watchreel {
+	height: 500px;
+	margin: auto;
+	text-align: center;
+	padding-top: calc(500px / 2 - 50px);
+}
+
+.watchreel-mobile {
+	padding-top: 150px;
+}
+
+.watchreel-content {
+	color: rgba(255, 255, 255, 1);
+	font-weight: bold;
+	font-size: 70px;
+	text-align: center;
+
+	transition: .2s;
+}
+
+.watchreel-content:hover {
+	color: rgba(255, 255, 255, .5);
+	text-decoration: none;
+}
+
+.watchreel-image {
+	margin-left: 15px;
+	margin-top: -5px;
+	display: inline-block;
+	filter: invert(100%);
+	width: 70px;
+	height: 70px;
+	transition: .2s;
+}
+
+.watchreel-content:hover .watchreel-image {
+	opacity: .5
+}
+
+.watchreel-background {
+	filter: brightness(.8) !important;
+}

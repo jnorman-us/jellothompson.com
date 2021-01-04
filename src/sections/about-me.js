@@ -37,7 +37,7 @@ export default class AboutMeSection extends React.Component
 							<img src={ portrait } className="aboutme-image" />
 						</Col>
 						<Col lg="9" md="8" sm="6" xs="12" className="aboutme-content">
-							<div className="aboutme-title">
+							<div className={ `aboutme-title ${ mobile ? 'aboutme-title-mobile' : '' }` }>
 								About Me
 							</div>
 							<div className="aboutme-summary">

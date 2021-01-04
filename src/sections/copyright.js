@@ -45,9 +45,9 @@ export default class CopyrightSection extends React.Component
 			<div className="page-content">
 				<div className="copyright">
 					<div className="copyright-menu">
-						{ this.renderLink("reels", "Reel") } &#124;&nbsp;
 						{ this.renderLink("aboutme", "About Me") } &#124;&nbsp;
 						{ this.renderLink("skills", "Skills") } &#124;&nbsp;
+						{ this.renderLink("watch-reel", "Reel") } &#124;&nbsp;
 						{ this.renderLink("portfolio", "Portfolio") } &#124;&nbsp;
 						{ this.renderLink("contactme", "Contact Me") }
 					</div>

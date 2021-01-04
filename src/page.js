@@ -7,6 +7,7 @@ import LoadingSection from './sections/loading.js';
 import ReelsSection from './sections/reels.js';
 import AboutMeSection from './sections/about-me.js';
 import SkillsSection from './sections/skills.js';
+import WatchReelSection from './sections/watch-reel.js';
 import PortfolioSection from './sections/portfolio.js';
 import ContactMeSection from './sections/contactme.js';
 import CopyrightSection from './sections/copyright.js';
@@ -85,7 +86,7 @@ export default class Page extends React.Component
 							shown={ slided }
 							fixed={ menu_fixed }
 						/>
-						<Element name="reels">
+						<Element name="top">
 							<ReelsSection
 								mobile={ mobile }
 								onSlided={ this.handleSlided.bind(this) }
@@ -93,6 +94,11 @@ export default class Page extends React.Component
 						</Element>
 						<Element name="aboutme">
 							<AboutMeSection
+								mobile={ mobile }
+							/>
+						</Element>
+						<Element name="watch-reel">
+							<WatchReelSection
 								mobile={ mobile }
 							/>
 						</Element>

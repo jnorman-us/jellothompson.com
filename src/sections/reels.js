@@ -83,6 +83,7 @@ export default class ReelsSection extends React.Component
 		// Maybe swap out the 3 videos and just have the one video in the background
 		// So that there are no more consistancy bugs
 		//
+		const mobile = this.state.mobile;
 		const show_main = this.state.show_main;
 		const show_one = this.state.show_one;
 		const show_two = this.state.show_two;
@@ -142,8 +143,9 @@ export default class ReelsSection extends React.Component
 						muted loop src={ motion_video }
 					/>
 				</div>
-				<div className="reels-content">
-					test
+				<div className={ `reels-content ${ mobile ? 'reels-content-mobile' : '' }` }>
+					<div className="reels-content-jt"> Jello Thompson </div>
+					<div className="reels-content-pp"> Post Production </div>
 				</div>
 			</div>
 		);

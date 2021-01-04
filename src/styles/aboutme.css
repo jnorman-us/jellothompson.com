@@ -19,6 +19,10 @@
 	color: rgb(255, 255, 255, 1);
 }
 
+.aboutme-title-mobile {
+	font-size: 40px;
+}
+
 .aboutme-summary {
 	font-weight: 100;
 	font-size: 24px;

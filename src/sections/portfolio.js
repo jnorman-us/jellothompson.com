@@ -93,12 +93,14 @@ export default class PortfolioSection extends React.Component
 
 	render()
 	{
+		const mobile = this.state.mobile;
+
 		return (
 			<div className="page-content">
-				<div className="aboutme-title">
+				<div className={ `aboutme-title ${ mobile ? 'aboutme-title-mobile' : '' }` }>
 					Filmography
 				</div>
-				<Container fluid>
+				<Container fluid className="px-0">
 					<Row>
 						{ this.renderFilmography() }
 					</Row>
