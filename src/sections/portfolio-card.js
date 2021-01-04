@@ -21,19 +21,17 @@ export default class PortfolioCard extends React.Component
 	{
 		const elements = [];
 
-		var first = true;
+		var i = 0;
 		for(const credit of this.credits)
 		{
+			var last = i + 1 == this.credits.length;
 			elements.push(
 				<CreditsSection
-					first={ first }
+					last={ last }
 					skill={ credit }
 				/>
 			);
-			if(first == true)
-			{
-				first = false;
-			}
+			i ++;
 		}
 		return elements;
 	}
