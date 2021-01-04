@@ -90,6 +90,7 @@ export default class Page extends React.Component
 							<ReelsSection
 								mobile={ mobile }
 								onSlided={ this.handleSlided.bind(this) }
+								shown={ slided }
 							/>
 						</Element>
 						<Element name="aboutme">

@@ -16,6 +16,13 @@
 	height: 100%;
 
 	font-size: 80px;
+
+	opacity: 0;
+	transition: .5s;
+}
+
+.reels-content-shown {
+	opacity: 1;
 }
 
 .reels-content-jt {

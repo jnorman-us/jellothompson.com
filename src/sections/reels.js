@@ -25,6 +25,7 @@ export default class ReelsSection extends React.Component
 			show_three: false,
 			show_main: false,
 			play: false,
+			shown: false,
 		};
 	}
 
@@ -32,6 +33,7 @@ export default class ReelsSection extends React.Component
 	{
 		this.setState({
 			mobile: props.mobile,
+			shown: props.shown,
 		});
 	}
 
@@ -84,6 +86,8 @@ export default class ReelsSection extends React.Component
 		// So that there are no more consistancy bugs
 		//
 		const mobile = this.state.mobile;
+		const shown = this.state.shown;
+
 		const show_main = this.state.show_main;
 		const show_one = this.state.show_one;
 		const show_two = this.state.show_two;
@@ -143,7 +147,7 @@ export default class ReelsSection extends React.Component
 						muted loop src={ motion_video }
 					/>
 				</div>
-				<div className={ `reels-content ${ mobile ? 'reels-content-mobile' : '' }` }>
+				<div className={ `reels-content ${ mobile ? 'reels-content-mobile' : '' } ${ shown ? 'reels-content-shown' : '' }` }>
 					<div className="reels-content-jt"> Jello Thompson </div>
 					<div className="reels-content-pp"> Post Production </div>
 				</div>
