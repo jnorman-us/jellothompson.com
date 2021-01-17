@@ -3,6 +3,7 @@ import React from 'react';
 import delay from '../utils/delay.js';
 
 import motion_video from '../images/720HD.mp4';
+import jtpp from '../images/jtpp.png';
 import '../styles/reels.css';
 
 export default class ReelsSection extends React.Component
@@ -147,10 +148,9 @@ export default class ReelsSection extends React.Component
 						muted loop src={ motion_video }
 					/>
 				</div>
-				<div className={ `reels-content ${ mobile ? 'reels-content-mobile' : '' } ${ shown ? 'reels-content-shown' : '' }` }>
-					<div className="reels-content-jt"> Jello Thompson </div>
-					<div className="reels-content-pp"> Post Production </div>
-				</div>
+				<div className={ `reels-content ${ shown ? 'reels-content-shown' : '' }` } style={{
+					backgroundImage: `url(${ jtpp })`,
+				}} />
 			</div>
 		);
 	}

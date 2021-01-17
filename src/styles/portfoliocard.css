@@ -16,12 +16,24 @@
 
 .portfoliocard-image {
 	max-height: 160px;
-	width: auto;
+	height: 125px;
 	display: block;
 	margin: auto;
-	text-align: center;
+
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .portfoliocard-content {
 	font-family: "Open Sans";
+}
+
+.collabcard-content {
+	margin-top: 15px;
+	font-family: "Open Sans";
+	font-size: 16px;
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 25px;
 }

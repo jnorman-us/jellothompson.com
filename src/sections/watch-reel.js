@@ -33,7 +33,7 @@ export default class WatchReelSection extends React.Component
 		return (
 			<Parallax
 				bgImage={ watchreel }
-				strength={ -100 }
+				strength={ -200 }
 				bgClassName="watchreel-background"
 			>
 				<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }`}>

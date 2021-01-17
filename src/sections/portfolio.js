@@ -2,8 +2,13 @@ import React from 'react';
 import { Container, Row, Col, CardColumns } from 'react-bootstrap';
 
 import PortfolioCardSection from './portfolio-card.js';
+import CollabCardSection from './collab-card.js';
 
 import '../styles/portfoliocard.css';
+
+import chicagofilmmakers from '../images/portfolio/chicagofilmmakers.png';
+import unitedairlines from '../images/portfolio/unitedairlines.png';
+import whoztheboss from '../images/portfolio/whoztheboss.png';
 
 export default class PortfolioSection extends React.Component
 {
@@ -62,6 +67,20 @@ export default class PortfolioSection extends React.Component
 			credits: [ "Colorist", "VFX", "Motion Graphics" ],
 		}];
 
+		this.collabs = [{
+			title: "Chicago Film Makers",
+			image: chicagofilmmakers,
+			description: "Promos for summer workshops, 38th Reeling Film Festival",
+		}, {
+			title: "United Airlines",
+			image: unitedairlines,
+			description: "Internal marketing video campaign",
+		}, {
+			title: "Who'z the Boss Music Library",
+			image: whoztheboss,
+			description: "TV & Internet Spots, Album cover design",
+		}];
+
 		this.filmography.reverse();
 	}
 
@@ -79,11 +98,30 @@ export default class PortfolioSection extends React.Component
 		for(const film of this.filmography)
 		{
 			elements.push(
-				<Col xl="4" lg="6" sm="12">
+				<Col xl="4" md="6" sm="12">
 					<PortfolioCardSection
 						title={ film.title }
 						year={ film.year }
 						credits={ film.credits }
+					/>
+				</Col>
+			);
+		}
+		return elements;
+	}
+
+	renderCollabs()
+	{
+		const elements = [];
+
+		for(const collab of this.collabs)
+		{
+			elements.push(
+				<Col xl="4" lg="6" md="12">
+					<CollabCardSection
+						title={ collab.title }
+						image={ collab.image }
+						description={ collab.description }
 					/>
 				</Col>
 			);
@@ -103,6 +141,9 @@ export default class PortfolioSection extends React.Component
 				<Container fluid className="px-0">
 					<Row>
 						{ this.renderFilmography() }
+					</Row>
+					<Row>
+						{ this.renderCollabs() }
 					</Row>
 				</Container>
 			</div>

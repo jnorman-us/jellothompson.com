@@ -30,7 +30,7 @@ export default class LoadingSection extends React.Component
 
 	async componentDidMount()
 	{
-		await delay(4200);
+		await delay(420);
 
 		this.onLoaded();
 
