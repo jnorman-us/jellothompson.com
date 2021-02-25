@@ -41,10 +41,21 @@ export default class AboutMeSection extends React.Component
 								About Me
 							</div>
 							<div className="aboutme-summary">
-								Hello! I'm a Post-Production aficionado
+								Howdy, my name is Jello Thompson
 							</div>
 							<div className="aboutme-text py-3">
-								...and editor, though I would consider myself a storyteller more than a filmmaker. My strengths are in my ability in finding a story to tell in the art of the cut. I am very technical, and well versed with Adobe Premiere, After Effects, DaVinci Resolve, Avid Media Composer, and Pro Tools. Every day, I am constantly learning new techniques and skills to better improve as an editor and storyteller. My experience involves extends beyond the visual edit, but designing motion graphics, color grading, and sound design.
+							I’m an editor, colorist, vfx artist, sound designer, post-production specialist, filmmaker, and more
+importantly a storyteller. Through editing, piecing together the story, and reining in everyone’s
+creative vision is my speciality. There are many ways to cut a film, and it is my job to find the
+best story to tell. My background as an editor has a very heavy visual effects influence as
+creating those effects and motion graphics is how I ended up becoming an editor. I started my
+career in post through After Effects, and have been working with AE since 2013. I’m a very
+technical person and work diligently to know my software in and out. I’m adept across multiple
+platforms, with a focus in Avid and Premiere Pro. Beyond these two NLE’s, I am well-versed in
+Pro Tools and DaVinci Resolve and the tools used for post-audio and finishing. Beyond my
+skills and knowledge in the cutting room, I’m a team player. I collaborate frequently and work to
+ensure deadlines are met. I’m here to help in any capacity and confident that as a part of your
+team, we can make some movie magic.
 							</div>
 						</Col>
 					</Row>
