@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { Link } from 'react-scroll';
 
 import SocialSection from './social.js';
@@ -32,6 +33,12 @@ export default class CopyrightSection extends React.Component
 				className="copyright-menu-link"
 				to={ to }
 				smooth={ true }
+				onClick={ () => {
+					ReactGA.event({
+						category: 'Navigation',
+						action: `clicked on "${ title }" link`,
+					})
+				}}
 			>{ title }</Link>
 		);
 	}

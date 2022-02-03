@@ -27,7 +27,6 @@ export default class Menu extends React.Component
 
 	async componentWillReceiveProps(props)
 	{
-
 		this.setState({
 			mobile: props.mobile,
 			shown: props.shown,
@@ -67,6 +66,7 @@ export default class Menu extends React.Component
 				className="menu-link"
 				to={ to }
 				smooth={ true }
+				
 			>{ title }</Link>
 		);
 	}
