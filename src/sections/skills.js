@@ -36,19 +36,19 @@ export default class SkillsSection extends React.Component
 
 	handleHover(section, inside)
 	{
-		if(section == "Editing")
+		if(section === "Editing")
 		{
 			this.setState({
 				editing_val: inside ? this.editing_full : 0,
 			});
 		}
-		else if(section == "VFX")
+		else if(section === "VFX")
 		{
 			this.setState({
 				vfx_val: inside ? this.vfx_full : 0,
 			});
 		}
-		else if(section == "Audio")
+		else if(section === "Audio")
 		{
 			this.setState({
 				audio_val: inside ? this.audio_full : 0,

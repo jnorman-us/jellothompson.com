@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga';
-import EmailJS from 'emailjs-com';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 
 import background from '../images/background.png';
@@ -29,13 +27,7 @@ export default class ContactMeSection extends React.Component
 	async sendEmail(e)
 	{
 		e.preventDefault();
-
-		ReactGA.event({
-			category: 'Email',
-			action: 'Sent email',
-		})
-		const result = await EmailJS.sendForm('service_owl7xjn', 'template_w4mhu1e', e.target, 'user_nzZKA4wORujISbp6zChkV');
-
+        
 		alert('Email Sent!');
 	}
 

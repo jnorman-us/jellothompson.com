@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, } from 'react-bootstrap';
 
 import CreditsSection from './credits.js';
 
@@ -24,7 +23,7 @@ export default class PortfolioCard extends React.Component
 		var i = 0;
 		for(const credit of this.credits)
 		{
-			var last = i + 1 == this.credits.length;
+			var last = i + 1 === this.credits.length;
 			elements.push(
 				<CreditsSection
 					last={ last }

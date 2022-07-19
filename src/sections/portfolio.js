@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, CardColumns } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import PortfolioCardSection from './portfolio-card.js';
 import CollabCardSection from './collab-card.js';
@@ -65,7 +65,31 @@ export default class PortfolioSection extends React.Component
 			title: "Hellwave",
 			year: 2020,
 			credits: [ "Colorist", "VFX", "Motion Graphics" ],
-		}];
+		}, {
+            title: "The Christmas Pitch - Feature",
+            year: 2021,
+            credits: [ "Asst. Editor" ],
+        }, {
+            title: "Making Beethoven Proud - Short Film",
+            year: 2021,
+            credits: [ "Supervising Sound Editor", "Re-recording Mixer" ],
+        }, {
+            title: "Wake & Bake - TV Series",
+            year: 2021,
+            credits: [ "Editorial Department" ],
+        }, {
+            title: "Augury - Short Film",
+            year: 2021,
+            credits: [ "Editor", "VFX Supervisor", "Post-Production Supervisor" ],
+        }, {
+            title: "Sinking - Short Film",
+            year: 2021,
+            credits: [ "Asst. Editor", "VFX Supervisor", "Post-Production Supervisor" ],
+        }, {
+            title: "Bliss - Short Film",
+            year: 2021,
+            credits: [ "VFX Supervisor", "Post-Production Supervisor" ],
+        }];
 
 		this.collabs = [{
 			title: "Chicago Film Makers",

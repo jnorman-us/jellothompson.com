@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga';
-import { Parallax, Background } from 'react-parallax';
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import { Parallax } from 'react-parallax';
 
 import watchreel from '../images/watchreel.jpg';
 import circledplay from '../images/circledplay.png';
@@ -39,12 +37,11 @@ export default class WatchReelSection extends React.Component
 			>
 				<div className={ `page-content ${ mobile ? 'page-content-mobile' : '' }`}>
 					<div className={ `watchreel ${ mobile ? 'watchreel-mobile' : '' }` }>
-						<a href="https://youtu.be/DdUjhy0j3j4" target="_blank" className="watchreel-content" onClick={ () => {
-							ReactGA.event({
-								category: 'Reel',
-								action: `Clicked on link to watch Reel`,
-							})
-						}}>
+						<a
+                            href="https://youtu.be/DdUjhy0j3j4"
+                            target="_blank"
+                            className="watchreel-content"
+                        >
 							Watch the Reel
 							<img src={ circledplay } className="watchreel-image" />
 						</a>

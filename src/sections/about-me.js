@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import SocialSection from './social.js';
-
 import '../styles/aboutme.css';
 
 import portrait from '../images/portrait.png';

@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga';
-import { Link, Element } from 'react-scroll'
+import { Element } from 'react-scroll'
 
 import Menu from './menu.js';
 
@@ -34,7 +33,6 @@ export default class Page extends React.Component
 
 	async componentDidMount()
 	{
-		ReactGA.pageview('/');
 		this.updateDimensions();
 		window.addEventListener('resize', this.updateDimensions.bind(this));
 		window.addEventListener('scroll', this.handleScroll.bind(this));
