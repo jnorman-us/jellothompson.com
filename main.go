@@ -13,6 +13,7 @@ func main() {
 	r := mux.NewRouter()
 	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./frontend/build")))
 
+	log.Printf("Running Server on port: %s\n", port)
 	err := http.ListenAndServe(":" + port, r)
 	if err != nil {
 		log.Fatal(err)
